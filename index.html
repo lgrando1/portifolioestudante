@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | [Seu Nome]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-bg': '#1a202c',
+                        'card-bg': '#2d3748',
+                        'accent': '#4299e1',
+                        'accent-hover': '#2b6cb0',
+                        'text-light': '#e2e8f0',
+                        'text-dark': '#a0aec0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo para a barra de rolagem (opcional, mas melhora a estética) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-text-light font-sans antialiased">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-card-bg/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                <a href="#inicio">[Seu Nome]</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#sobre" class="hover:text-accent transition-colors duration-300">Sobre</a>
+                <a href="#projetos" class="hover:text-accent transition-colors duration-300">Projetos</a>
+                <a href="#habilidades" class="hover:text-accent transition-colors duration-300">Habilidades</a>
+                <a href="#contato" class="bg-accent text-white px-4 py-2 rounded-md hover:bg-accent-hover transition-colors duration-300">Contato</a>
+            </div>
+             <!-- Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Links do Menu Mobile -->
+        <div id="menu" class="hidden md:hidden">
+            <a href="#sobre" class="block text-center py-2 px-4 text-sm hover:bg-gray-700">Sobre</a>
+            <a href="#projetos" class="block text-center py-2 px-4 text-sm hover:bg-gray-700">Projetos</a>
+            <a href="#habilidades" class="block text-center py-2 px-4 text-sm hover:bg-gray-700">Habilidades</a>
+            <a href="#contato" class="block text-center py-2 px-4 text-sm hover:bg-gray-700">Contato</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Seção Inicial (Hero) -->
+        <section id="inicio" class="flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-80px)]">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Olá, eu sou [Seu Nome]</h1>
+                <p class="text-lg md:text-xl text-text-dark mb-8">Estudante de Ciência da Computação apaixonado por resolver problemas e desenvolver soluções inovadoras.</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://github.com/seu-usuario" target="_blank" class="text-accent hover:underline">GitHub</a>
+                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="text-accent hover:underline">LinkedIn</a>
+                    <a href="mailto:seu.email@exemplo.com" class="text-accent hover:underline">Email</a>
+                </div>
+            </div>
+            <div class="md:w-1/3 flex justify-center">
+                <img src="https://placehold.co/400x400/2d3748/e2e8f0?text=Sua+Foto" alt="Foto de [Seu Nome]" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-card-bg">
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Sobre Mim</h2>
+            <div class="max-w-4xl mx-auto bg-card-bg p-8 rounded-lg shadow-lg">
+                <p class="text-text-dark mb-4">
+                    Atualmente no terceiro semestre de Ciência da Computação na [Nome da Universidade], estou construindo uma base sólida em algoritmos, estruturas de dados e desenvolvimento de software. Tenho um grande interesse em desenvolvimento web e inteligência artificial, áreas que busco explorar em projetos acadêmicos e pessoais.
+                </p>
+                <p class="text-text-dark">
+                    Meu objetivo de carreira é me tornar um desenvolvedor de software full-stack, contribuindo para projetos desafiadores que tenham um impacto positivo. Estou sempre em busca de oportunidades para aprender novas tecnologias e colaborar com outros desenvolvedores para criar produtos incríveis.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section id="projetos" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Meus Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="bg-card-bg rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/1a202c/4299e1?text=Projeto+1" alt="Imagem do Projeto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Analisador de Texto em Python</h3>
+                        <p class="text-text-dark mb-4">Uma ferramenta de linha de comando que analisa um arquivo de texto e retorna estatísticas como contagem de palavras, frequência de caracteres e muito mais.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">CLI</span>
+                        </div>
+                        <a href="https://github.com/seu-usuario/projeto-1" target="_blank" class="inline-block text-accent font-semibold hover:underline">Ver no GitHub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="bg-card-bg rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/1a202c/4299e1?text=Projeto+2" alt="Imagem do Projeto 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Website de Portfólio Simples</h3>
+                        <p class="text-text-dark mb-4">Primeira versão do meu portfólio pessoal, desenvolvida para praticar conceitos de design responsivo e estruturação de páginas web.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">HTML5</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">CSS3</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/seu-usuario/projeto-2" target="_blank" class="inline-block text-accent font-semibold hover:underline">Ver no GitHub &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="bg-card-bg rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/600x400/1a202c/4299e1?text=Projeto+3" alt="Imagem do Projeto 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">Implementação de Estruturas de Dados</h3>
+                        <p class="text-text-dark mb-4">Projeto acadêmico com a implementação de listas ligadas, pilhas e filas em C++ para solidificar conceitos fundamentais da disciplina.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">C++</span>
+                            <span class="bg-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">Estrutura de Dados</span>
+                        </div>
+                        <a href="https://github.com/seu-usuario/projeto-3" target="_blank" class="inline-block text-accent font-semibold hover:underline">Ver no GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Habilidades -->
+        <section id="habilidades" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Habilidades Técnicas</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-card-bg p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Linguagens de Programação</h3>
+                    <ul class="text-text-dark space-y-2">
+                        <li>Python</li>
+                        <li>JavaScript (Básico)</li>
+                        <li>C / C++</li>
+                        <li>SQL (Básico)</li>
+                    </ul>
+                </div>
+                <div class="bg-card-bg p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Ferramentas e Tecnologias</h3>
+                    <ul class="text-text-dark space-y-2">
+                        <li>HTML5 & CSS3</li>
+                        <li>Git & GitHub</li>
+                        <li>Linux (Básico)</li>
+                        <li>Figma (Design de UI)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="py-20 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Vamos Conversar!</h2>
+            <p class="text-text-dark mb-8 max-w-2xl mx-auto">Estou aberto a novas oportunidades, projetos de colaboração e estágios. Sinta-se à vontade para entrar em contato.</p>
+            <a href="mailto:seu.email@exemplo.com" class="bg-accent text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-accent-hover transition-colors duration-300">
+                Mande um E-mail
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-card-bg py-6">
+        <div class="container mx-auto px-6 text-center text-text-dark">
+            <p>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para menu mobile
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu ao clicar em um link
+        const menuLinks = menu.getElementsByTagName('a');
+        for (let i = 0; i < menuLinks.length; i++) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
